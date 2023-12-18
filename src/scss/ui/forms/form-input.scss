@@ -1,0 +1,13 @@
+.form_input {
+	@include bp($point_2, min) {
+		width: 21.6rem;
+	}
+}
+
+.form_input__label {
+	@include form_el_label;
+}
+
+.form_input__element {
+	@include form_el_default;
+}
