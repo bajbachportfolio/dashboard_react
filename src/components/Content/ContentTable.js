@@ -8,7 +8,7 @@ const ContentTable = ({ value }) => {
     const userObjValues = Object.values(user);
     const userValuesArray = [];
 
-    userObjValues.map((userObjValue) => {
+    userObjValues.forEach((userObjValue) => {
       const userInputValue = userObjValue
         .toLowerCase()
         .includes(value.toLocaleLowerCase());
