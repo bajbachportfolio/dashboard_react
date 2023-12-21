@@ -11,25 +11,13 @@ const ContentBlockBottom = () => {
         <ul className="pagination__list">
           {pages.map((page, index) =>
             index === 0 ? (
-              <PaginationItem
-                className={"pagination__item--prev_mod"}
-                ariaLabel={"prev"}
-              />
+              <PaginationItem mod={"prev"} ariaLabel={"prev"} />
             ) : index === 1 ? (
-              <PaginationItem
-                className={"pagination__item--active_mod"}
-                value={page - 1}
-              />
+              <PaginationItem mod={"active"} value={page - 1} />
             ) : index === 5 ? (
-              <PaginationItem
-                className={"pagination__item--dots_mod"}
-                value={"..."}
-              />
+              <PaginationItem mod={"dots"} value={"..."} />
             ) : index === pages.length - 1 ? (
-              <PaginationItem
-                className={"pagination__item--next_mod"}
-                ariaLabel={"next"}
-              />
+              <PaginationItem mod={"next"} ariaLabel={"next"} />
             ) : (
               <PaginationItem value={page - 1} />
             )

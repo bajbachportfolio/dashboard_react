@@ -1,6 +1,8 @@
 const PaginationItem = (props) => {
+  const classMod = props.mod ? `pagination__item--${props.mod}_mod` : null;
+
   return (
-    <li className={["pagination__item", props.className].join(" ")}>
+    <li className={["pagination__item", classMod].join(" ")}>
       {props.ariaLabel ? (
         <a
           className="pagination__link"
