@@ -3,7 +3,11 @@ import React from "react";
 const SidebarMenuItem = ({ menuItem }) => {
   return (
     <li className="sidebar_menu__item">
-      <a className="sidebar_menu__link" href="#s" aria-label="menu link">
+      <a
+        className={["sidebar_menu__link", menuItem.mod].join(" ")}
+        href="#s"
+        aria-label="menu link"
+      >
         <div className="sidebar_menu__link_icon_w">
           <span className="icon icon--size_mod">{menuItem.icon}</span>
         </div>

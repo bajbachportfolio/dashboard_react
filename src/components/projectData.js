@@ -23,6 +23,7 @@ export const menuList = [
   {
     menuItem: "Customers",
     icon: <UserIcon />,
+    mod: "sidebar_menu__link--active_mod",
   },
   {
     menuItem: "Income",
@@ -38,6 +39,15 @@ export const menuList = [
   },
 ];
 
+export const usersListHead = [
+  "Customer Name",
+  "Company",
+  "Phone Number",
+  "Email",
+  "Country",
+  "Status",
+];
+
 export const usersList = [
   {
     name: "Jane Cooper",
@@ -45,7 +55,7 @@ export const usersList = [
     phone: "(225) 555-0118",
     email: "jane@microsoft.com",
     country: "United States",
-    status: "Active",
+    status: "active",
   },
   {
     name: "Floyd Miles",
@@ -53,7 +63,7 @@ export const usersList = [
     phone: "(205) 555-0100",
     email: "floyd@yahoo.com",
     country: "Kiribati",
-    status: "Inactive",
+    status: "inactive",
   },
   {
     name: "Ronald Richards",
@@ -61,7 +71,7 @@ export const usersList = [
     phone: "(302) 555-0107",
     email: "ronald@adobe.com",
     country: "Israel",
-    status: "Inactive",
+    status: "inactive",
   },
   {
     name: "Marvin McKinney",
@@ -69,7 +79,7 @@ export const usersList = [
     phone: "(252) 555-0126",
     email: "marvin@tesla.com",
     country: "Iran",
-    status: "Active",
+    status: "active",
   },
   {
     name: "Jerome Bell",
@@ -77,7 +87,7 @@ export const usersList = [
     phone: "(629) 555-0129",
     email: "jerome@google.com",
     country: "Réunion",
-    status: "Active",
+    status: "active",
   },
   {
     name: "Kathryn Murphy",
@@ -85,7 +95,7 @@ export const usersList = [
     phone: "(406) 555-0120",
     email: "kathryn@microsoft.com",
     country: "Curaçao",
-    status: "Active",
+    status: "active",
   },
   {
     name: "Jacob Jones",
@@ -93,7 +103,7 @@ export const usersList = [
     phone: "(208) 555-0112",
     email: "jacob@yahoo.com",
     country: "Brazil",
-    status: "Active",
+    status: "active",
   },
   {
     name: "Kristin Watson",
@@ -101,6 +111,6 @@ export const usersList = [
     phone: "(704) 555-0127",
     email: "kristin@facebook.com",
     country: "Åland Islands",
-    status: "Inactive",
+    status: "inactive",
   },
 ];

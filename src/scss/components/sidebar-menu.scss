@@ -33,6 +33,11 @@
 		background-color: $blue_1;
 		color: $white;
 	}
+
+	&.sidebar_menu__link--active_mod {
+		background-color: $blue_1;
+		color: $white;
+	}
 }
 
 .sidebar_menu__link_icon_w {
