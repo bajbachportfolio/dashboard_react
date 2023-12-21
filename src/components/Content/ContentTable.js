@@ -9,11 +9,11 @@ const ContentTable = ({ value }) => {
     const userValuesArray = [];
 
     userObjValues.map((userObjValue) => {
-      const userObjectValue = userObjValue
+      const userInputValue = userObjValue
         .toLowerCase()
         .includes(value.toLocaleLowerCase());
 
-      userValuesArray.push(userObjectValue);
+      userValuesArray.push(userInputValue);
     });
 
     const filterOfAllProperties = userValuesArray.reduce((a, b) => {
@@ -24,7 +24,7 @@ const ContentTable = ({ value }) => {
   };
 
   const filteredUsers = usersList.filter((user) => {
-    return userInfoFilter(user, value);
+    return userInfoFilter(user.info, value);
   });
 
   return (
@@ -39,7 +39,7 @@ const ContentTable = ({ value }) => {
       <tbody>
         {usersList.length && filteredUsers.length ? (
           filteredUsers.map((user, index) => (
-            <ContentTableRow tableRow={user} key={index} />
+            <ContentTableRow tableRow={user.info} key={index} />
           ))
         ) : (
           <tr>
