@@ -1,97 +1,98 @@
 .pagination {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 
-	&.user_block__pagination {
-		@include bp($point_2, min) {
-			margin-left: auto;
-		}
-	}
+  &.user_block__pagination {
+    @include bp($point_2, min) {
+      margin-left: auto;
+    }
+  }
 }
 
 .pagination__list {
-	display: flex;
-	margin-right: -1.2rem;
+  display: flex;
+  margin-right: -1.2rem;
 }
 
 .pagination__item {
-	padding-right: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 .pagination__link {
-	display: block;
+  display: block;
 
-	min-width: 2.4rem;
-	height: 2.4rem;
+  min-width: 2.4rem;
+  width: max-content;
+  height: 2.4rem;
 
-	padding: 0 0.6rem;
+  padding: 0 0.6rem;
 
-	text-align: center;
-	line-height: 2.4rem;
-	color: $black;
+  text-align: center;
+  line-height: 2.4rem;
+  color: $black;
 
-	border: 1px solid $gray_3;
-	background-color: #f5f5f5;
-	border-radius: 4px;
+  border: 1px solid $gray_3;
+  background-color: #f5f5f5;
+  border-radius: 4px;
 
-	&:hover,
-	&:focus {
-		text-decoration: none;
-	}
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 
-	.pagination__item--active_mod &,
-	&:hover {
-		color: $white;
-		background: $blue_1;
-	}
+  .pagination__item--active_mod &,
+  &:hover {
+    color: $white;
+    background: $blue_1;
+  }
 
-	.pagination__item--active_mod & {
-		pointer-events: none;
-	}
+  .pagination__item--active_mod & {
+    pointer-events: none;
+  }
 
-	.pagination__item--dots_mod & {
-		border-color: transparent;
+  .pagination__item--dots_mod & {
+    border-color: transparent;
 
-		&:hover {
-			color: $black;
-			background: $white;
-		}
-	}
+    &:hover {
+      color: $black;
+      background: $white;
+    }
+  }
 
-	.pagination__item--prev_mod &,
-	.pagination__item--next_mod & {
-		position: relative;
+  .pagination__item--prev_mod &,
+  .pagination__item--next_mod & {
+    position: relative;
 
-		&:before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			margin: (-0.3rem) 0 0 0;
-			display: block;
-		}
-	}
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin: (-0.3rem) 0 0 0;
+      display: block;
+    }
+  }
 
-	.pagination__item--prev_mod & {
-		&:before {
-			left: 0.9rem;
+  .pagination__item--prev_mod & {
+    &:before {
+      left: 0.9rem;
 
-			@include arrow(left, $black, 0.6rem, 0.2rem);
-		}
+      @include arrow(left, $black, 0.6rem, 0.2rem);
+    }
 
-		&:hover:before {
-			@include arrow(left, $white, 0.6rem, 0.2rem);
-		}
-	}
+    &:hover:before {
+      @include arrow(left, $white, 0.6rem, 0.2rem);
+    }
+  }
 
-	.pagination__item--next_mod & {
-		&:before {
-			right: 0.9rem;
+  .pagination__item--next_mod & {
+    &:before {
+      right: 0.9rem;
 
-			@include arrow(right, $black, 0.6rem, 0.2rem);
-		}
+      @include arrow(right, $black, 0.6rem, 0.2rem);
+    }
 
-		&:hover:before {
-			@include arrow(right, $white, 0.6rem, 0.2rem);
-		}
-	}
+    &:hover:before {
+      @include arrow(right, $white, 0.6rem, 0.2rem);
+    }
+  }
 }
