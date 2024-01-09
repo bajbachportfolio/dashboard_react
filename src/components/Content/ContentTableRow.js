@@ -9,11 +9,7 @@ const ContentTableRow = ({ tableRow }) => {
         <td key={index}>
           {index === 5 ? (
             <ContentLabel
-              style={
-                tableRow.status === "active"
-                  ? "user_block__table_label user_block__table_label--active-mod"
-                  : "user_block__table_label user_block__table_label--inactive-mod"
-              }
+              style={tableRow.status === "active" ? "active" : "inactive"}
               value={item}
             />
           ) : index === 2 ? (
