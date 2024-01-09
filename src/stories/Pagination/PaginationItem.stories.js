@@ -5,17 +5,40 @@ export default {
   title: "PaginationItem",
   component: PaginationItem,
   tags: ["autodocs"],
-  argTypes: {},
 };
 
-export const itemPrev = {
-  args: {
-    className: "prev",
+const Template = (args) => <PaginationItem {...args} />;
+
+export const ItemDirection = Template.bind({});
+ItemDirection.args = {
+  mod: "prev",
+};
+
+export const ItemDots = Template.bind({});
+ItemDots.args = {
+  mod: "dots",
+  value: "...",
+};
+
+export const ItemNumber = Template.bind({});
+ItemNumber.args = {
+  value: "5",
+};
+
+ItemDirection.argTypes = {
+  mod: {
+    type: "string",
+    defaultValue: "prev",
+    options: ["prev", "next"],
+    control: {
+      type: "radio",
+    },
   },
 };
 
-export const itemNext = {
-  args: {
-    className: "next",
+ItemDots.argTypes = {
+  mod: {
+    type: "string",
+    defaultValue: "dots",
   },
 };

@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from "prop-types";
+
 const PaginationItem = (props) => {
   const classMod = props.mod ? `pagination__item--${props.mod}_mod` : null;
 
@@ -21,3 +24,8 @@ const PaginationItem = (props) => {
   );
 };
 export default PaginationItem;
+
+// PaginationItem.propTypes = {
+//   mod: PropTypes.oneOf(["prev", "next"]),
+//   value: PropTypes.string,
+// };
